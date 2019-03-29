@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <script src="/build/mycomponent.js"></script>
+
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=BioRhyme');
+
+    body{
+      --color2: #264653;
+      --color1: #2A9D8F;
+    }
+
+    html, body {
+      background-color: var(--color1);
+
+      height: 100%;
+      width: 100%;
+      margin: 0;
+
+    }
+
+    body{
+      color: #fff;
+      font: 24px/40px BioRhyme;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    div{
+      background-color: var(--color2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <my-component first="Stencil" last="'Don't call me a framework' JS"></my-component>
+
+  <nc-grid-slider rows="3">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+  </nc-grid-slider>
+
+</body>
+</html>

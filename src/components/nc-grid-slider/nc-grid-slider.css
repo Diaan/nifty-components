@@ -1,0 +1,38 @@
+:host-context(.per-slide-1) {
+  --rows: 1;
+}
+
+:host-context(.per-slide-3) {
+  --rows: 3;
+}
+
+:host-context(.per-slide-4) {
+  --rows: 4;
+}
+
+:host {
+  background-color: #fff;
+  height: 280px;
+  width: 280px;
+  padding:8px;
+}
+
+
+slot {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+
+  grid-template-rows: repeat(var(--rows), 1fr);
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  grid-gap: 8px;
+}
+
+::slotted(*) {
+  scroll-snap-align: center;
+}
